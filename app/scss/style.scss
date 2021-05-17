@@ -4,7 +4,7 @@
 @import 'global';
 
 .header{
-    padding: 40px 0;
+    padding: 50px 0;
     &__inner{
         display: flex;
         justify-content: space-between;
@@ -17,46 +17,61 @@
         display: flex;
     }
     &__list-item + .menu__list-item{
-        padding-left: 35px;
+        padding-left: 30px;
     }
     &__list-link{
-        color: $title;
-        text-transform: uppercase;
-        transition: all .3s;
-        @extend %quicksand-400;
-        &:hover{
-            color: $accent;
-            border-bottom: 1px solid $accent;
-            @extend %quicksand-500;
-        }
-    }
-    &__list-link--active{
-        color: $accent;
-        border-bottom: 1px solid $accent;
-        @extend %quicksand-500;
+        color: #436372;
+        @extend %rubik-500;
     }
 }
 
 .user-nav{
     display: flex;
-    &__link{
+    &__link-img{
         position: relative;
+        &__num {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            top: -9px;
+            right: -14px;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+        }
     }
-    &__link + .user-nav__link{
-        padding-left: 25px;
-    }
-    &__num{
-        position: absolute;
-        width: 20px;
-        height: 20px;
+    .link-search{
+        background-color: #edf1f4;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
-        background-color: $accent;
-        top: -9px;
-        right: -14px;
-        font-size: 12px;
-        color: #ffffff;
-        line-height: 20px;
-        text-align: center;
+        margin-right: 25px;
+        position: relative;
+        &_img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-45%, -50%);
+        }
+    }
+    .link-heart{
+        background-color: $bg;
+        height: 50px;
+        border-radius: 25px 0 0 25px;
+        padding: 0 30px 0 30px;
+        border-right: 1px solid #fef7f0;
+        display: flex;
+    }
+    .link-cart{
+        background-color: $bg;
+        height: 50px;
+        border-radius: 0 25px 25px 0;
+        padding: 0 30px 0 30px;
+        margin-right: 25px;
+        display: flex;
     }
 }
 
