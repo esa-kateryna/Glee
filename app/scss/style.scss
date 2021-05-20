@@ -119,8 +119,8 @@ body{
         display: block;
     }
     &__content{
-        padding-top: 220px;
-        padding-bottom: 277px;
+        padding-top: 200px;
+        padding-bottom: 225px;
     }
     &__title{
         @extend %rubik-500;
@@ -140,18 +140,15 @@ body{
         margin-bottom: 43px;
     }
     &__btn{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
         background-color: #a3bbc8;
-        padding: 20px 100px 19px 25px;
+        padding: 20px 17px 19px 25px;
         color: #fff;
         @extend %rubik-500;
         font-size: 15px;
-        
-        &::after{
-            content: '';
-            background-image: '../images/slider/btn_arrow.svg';
-            width: 22px;
-            height: 9px;
-        }
     }
     &__img-couple{
         display: flex;
@@ -190,6 +187,36 @@ body{
         .slick-active button{
             background-color: #fff;
         }
+    }
+}
+
+.top-slider__benefits{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fef7f0;
+    padding: 40px 0;
+    &-inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 305px;
+    }
+    &-icon{
+        width: 70px;
+        height: 60px;
+        margin-right: 22px;
+    }
+    &-title{
+        @extend %dms-700;
+        font-size: 18px;
+        line-height: 40px;
+        color: #414141;
+    }
+    &-text{
+        @extend %dms-400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #585858;
     }
 }
 
@@ -242,6 +269,7 @@ body{
         border: none;
     }
 }
+
 .footer__bottom{
     display: flex;
     justify-content: space-between;
