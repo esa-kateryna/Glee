@@ -149,6 +149,11 @@ body{
         color: #fff;
         @extend %rubik-500;
         font-size: 15px;
+        & svg{
+            path{
+                fill: #fff;
+            }
+        }
     }
     &__img-couple{
         display: flex;
@@ -259,7 +264,14 @@ body{
         align-items: center;
         box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
         border-radius: 10px;
+        overflow: hidden;
+        transition: all .3s;
         position: relative;
+        &:hover{
+            .categories__content-icons{
+                transform: translateY(0);
+            }
+        }
     }
     &__content-title{
         @extend %dms-500;
@@ -278,6 +290,7 @@ body{
         display: flex;
         position: absolute;
         top: 50%;
+        transform: translateY(500%);
         li{
             margin: 0 10px;
             width: 45px;
@@ -286,11 +299,17 @@ body{
             border-radius: 50%;
             box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05 );
             position: relative;
+            
             svg{
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+            }
+            .categories__content-icon-link svg:hover{
+                path{
+                    fill: #fff;
+                }
             }
             &:hover{
                 background-color: #a3bbc8;
@@ -352,6 +371,153 @@ body{
             justify-content: space-between;
             margin-top: auto;
         }
+    }
+}
+
+.new-design{
+    padding-top: 70px;
+    &__main{
+        margin-bottom: 185px;
+    }
+    &__title{
+        @extend %dms-700;
+        font-size: 36px;
+        color: #191919;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__nav{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+    &__nav-btn{
+        background-color: transparent;
+        border: none;
+        padding: 0 30px;
+        @extend %dms-700;
+        font-size: 16px;
+        color: #8b8b8b;
+    }
+    &__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        margin-bottom: 120px;
+        &-item{
+            position: relative;
+        }
+        &-wrapper{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 32px 40px;
+        }
+        &-title{
+            @extend %dms-700;
+            font-size: 20px;
+            max-width: 175px;
+            margin-bottom: 20px;
+            a{
+                color: #191919;
+            }
+        }
+        &-style{
+            @extend %dms-700;
+            font-size: 16px;
+            color: #a3bbc8;
+        }
+    }
+    &__video-wrapper{
+        position: relative;
+    }
+    &__video-link{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 130px;
+        height: 130px;
+    }
+}
+
+.blog{
+   &__title-content{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-bottom: 30px;
+   }
+   &__title{
+    @extend %dms-700;
+    font-size: 36px;
+    color: #191919;
+   }
+   &__title-link{
+    @extend %dms-700;
+    font-size: 16px;
+    color: #262626;
+    padding-right: 25px;
+    &::after{
+        content: '';
+        background-image: url(../images/icons/angelArrow.svg);
+    }
+   }
+   &__items-wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: -172px;
+   }
+   &__item{
+       max-width: 370px;
+       background-color: #fff;
+   }
+   &__item-img{
+       
+   }
+   &__item-content{
+       padding: 35px 25px 20px;
+       position: relative;
+   }
+   &__item-btn{
+       max-width: 105px;
+       background-color: #a3bbc8;
+       border-radius: 25px;
+       padding: 10px 30px;
+       color: #fff;
+       @extend %poppins-700;
+       font-size: 14px;
+       text-transform: uppercase;
+       position: absolute;
+       top: -23px;
+   }
+   &__item-title{
+       @extend %dms-500;
+       font-size: 18px;
+       padding-bottom: 10px;
+       border-bottom: 1px solid #e0e0e0;
+       a{
+        color: #262626;
+       }
+   }
+   &__item-data{
+       display: flex;
+       justify-content: space-between;
+       margin-top: 20px;
+       @extend %rubik-400;
+       font-size: 12px;
+       color: #222933;
+       text-transform: uppercase;
+   }
+}
+
+.partners{
+    background-color: #fef7f0;
+    padding: 262px 0 90px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
