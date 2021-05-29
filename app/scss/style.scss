@@ -250,6 +250,9 @@ body{
         font-size: 16px;
         color: #8b8b8b;
     }
+    .mixitup-control-active{
+        color: #191919;
+    }
     &__content{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -399,6 +402,9 @@ body{
         font-size: 16px;
         color: #8b8b8b;
     }
+    .mixitup-control-active{
+        color: #191919;
+    }
     &__content{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -458,9 +464,12 @@ body{
     font-size: 16px;
     color: #262626;
     padding-right: 25px;
-    &::after{
-        content: '';
-        background-image: url(../images/icons/angelArrow.svg);
+    position: relative;
+    svg{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
     }
    }
    &__items-wrapper{
@@ -471,9 +480,6 @@ body{
    &__item{
        max-width: 370px;
        background-color: #fff;
-   }
-   &__item-img{
-       
    }
    &__item-content{
        padding: 35px 25px 20px;
@@ -534,11 +540,13 @@ body{
         line-height: 21px;
         margin-bottom: 25px;
     }
+    li{
+        margin-bottom: 18px;
+    }
     &-item-text, a{
         @extend %rubik-400;
         color: #7b7b7b;
         font-size: 14px;
-        line-height: 32px;
         text-decoration: none;
     }
     .footer__item-contacts{
