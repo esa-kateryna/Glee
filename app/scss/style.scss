@@ -111,6 +111,139 @@ body{
         }
     }
 }
+
+.page-top{
+    background-color: $bgblue;
+    padding: 35px 0 30px;
+    &__title{
+        @extend %rubik-400;
+        font-size: 36px;
+        color: #222933;
+        text-align: center;
+    }
+}
+
+.breadcrumbs{
+    &__list{
+        display: flex;
+        justify-content: center;
+    }
+    &__item{
+        @extend %rubik-500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #222933;
+        padding-right: 20px;
+        position: relative;
+        &::after{
+            content: '/';
+            color: #222933;
+            position: absolute;
+            right: 5px;
+        }
+        &:last-child{
+            padding-right: 0;
+            &::after{
+                content: '';
+            }
+        }
+        a{
+            color: #222933; 
+        }
+    }
+
+}
+
+.login{
+    padding: 120px 0;
+    &__form{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        max-width: 470px;
+    }
+    &__label{
+        @extend %rubik-500;
+        font-size: 14px;
+        color: #436372;
+    }
+    &__input{
+        width: 100%;
+        border: 2px solid #f6f6f6;
+        margin: 10px 0 25px;
+        line-height: 36px;
+        padding: 10px 15px;
+    }
+    &__btn{
+        background-color: $btn;
+        border: none;
+        color: #fff;
+        @extend %rubik-500;
+        font-size: 18px;
+        padding: 20px 0 18px;
+        margin: 30px 0;
+    }
+    &__helpers{
+        padding-bottom: 30px;
+        border-bottom: 2px solid #f6f6f6;
+        color: #436372;
+        @extend %rubik-500;
+        font-size: 14px;
+        line-height: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        a{
+            color: #436372;
+        }
+    }
+    &__registration{
+        max-width: 470px;
+        padding-top: 30px;
+    }
+    &__registration-text{
+        text-align: center;
+        color: #436372;
+        @extend %rubik-500;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 20px;
+    }
+    &__registration-btn{
+        background-color: transparent;
+        border: 2px solid $btn;
+        width: 100%;
+        padding: 20px 0;
+        @extend %rubik-500;
+        font-size: 18px;
+        color: #243f4d;
+    }
+    &__remember{
+        padding-left: 27px;
+    }
+    &__remember-input{
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        position: absolute;
+        &:checked + .login__remember-checkbox{
+            background-image: url(../images/icons/checked.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+    &__remember-checkbox{
+        width: 14px;
+        height: 14px;
+        border-radius: 1px;
+        background-color: #ebebeb;
+        position: absolute;
+        margin-left: -27px;
+        margin-top: 4px;
+    }
+}
+
 .top-slider{
     background-color: $bg;
     &__item{
@@ -520,13 +653,16 @@ body{
 .partners{
     background-color: #fef7f0;
     padding: 262px 0 90px 0;
+
     &__inner{
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 }
-
+.partners-other{
+    padding: 80px 0 90px;
+}
 .footer__top{
     display: flex;
     justify-content: space-between;
