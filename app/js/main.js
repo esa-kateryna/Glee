@@ -6,6 +6,29 @@ $(function(){
         
     });
 
+    $('.filter-price__input').ionRangeSlider({
+      type: "double",
+      prefix: "$",
+      postfix: ".00",
+      onStart: function (data){
+        $('.filter-price__show-from').text(data.from);
+        $('.filter-price__show-to').text(data.to);
+      },
+      onChange: function (data){
+        $('.filter-price__show-from').text(data.from);
+        $('.filter-price__show-to').text(data.to);
+      }
+    })
+
+    $('.filter-recent__star').rateYo({
+      starWidth: "11px",
+      normalFill: "#d6d6d6",
+      ratedFill: "#ffcc00",
+      numStars: 5,
+      readOnly: true,
+      spacing: "5px"
+    });
+
     var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');
  
