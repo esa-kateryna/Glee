@@ -327,7 +327,10 @@ body{
         }
     }
 }
-
+.top-slider__bottom{
+    max-width: 1770px;
+    margin: 0 auto;
+}
 .top-slider__benefits{
     display: flex;
     justify-content: space-around;
@@ -639,6 +642,7 @@ body{
         @extend %dms-700;
         font-size: 16px;
         color: #8b8b8b;
+        cursor: pointer;
     }
     .mixitup-control-active{
         color: #191919;
@@ -711,6 +715,8 @@ body{
     
     
     &__bottom{
+        max-width: 1770px;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 30px;
@@ -965,6 +971,7 @@ body{
         @extend %dms-700;
         font-size: 16px;
         color: #8b8b8b;
+        cursor: pointer;
     }
     .mixitup-control-active{
         color: #191919;
@@ -1094,6 +1101,84 @@ body{
 .partners-other{
     padding: 80px 0 90px;
 }
+
+.contact-page{
+    padding: 120px 0;
+    &__subtitle{
+        text-align: center;
+        @extend %poppins-700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $btn;
+    }
+    &__title{
+        text-align: center;
+        @extend %dms-700;
+        font-size: 35px;
+        line-height: 57px;
+        color: #436372;
+        margin-bottom: 60px;
+    }
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 120px;
+    }
+    &__card{
+        width: 370px;
+        background-color: #fbfbfb;
+        padding: 70px 47px;
+        border: 3px solid #fbfbfb;
+        &-img{
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            position: relative;
+            svg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &-title{
+            @extend %dms-700;
+            font-size: 20px;
+            color: #222222;
+            margin-top: 65px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        &-text{
+            @extend %rubik-500;
+            font-size: 16px;
+            color: #565872;
+            line-height: 30px;
+            text-align: center;
+        }
+        &:hover{
+            border: 3px solid $btn;
+            transition: all .3s;
+            .contact-page__card-img{
+                background-color: $btn;
+                svg{
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+    &__connection{
+        display: flex;
+        
+    }
+}
+
 .footer__top{
     display: flex;
     justify-content: space-between;
