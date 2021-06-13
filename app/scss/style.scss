@@ -919,34 +919,33 @@ body{
         .shop-grid{
             grid-template-columns: 1fr 1fr 1fr;
         }
-        .pagination{
-            margin-top: 100px;
-            &__list{
-                display: flex;
-                justify-content: center;
-            }
-            &__item{
-                margin-right: 17px;
-                &:last-child{
-                    margin-right: 0;
-                }
-            }
-            &__link{
-                @extend %rubik-400;
-                font-size: 16px;
-                line-height: 30px;
-                color: $text;
-                padding: 10px 16px;
-                border: 1px solid $btn;
-                &:hover{
-                    background-color: $btn;
-                    color: #fff;
-                }
-            }
+    }
+}
+.pagination{
+    margin-top: 100px;
+    &__list{
+        display: flex;
+        justify-content: center;
+    }
+    &__item{
+        margin-right: 17px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__link{
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        color: $text;
+        padding: 10px 16px;
+        border: 1px solid $btn;
+        &:hover{
+            background-color: $btn;
+            color: #fff;
         }
     }
 }
-
 .new-design{
     padding-top: 70px;
     &__main{
@@ -1252,6 +1251,175 @@ body{
         }
     }
     
+}
+
+.blog-page{
+    padding: 120px 0;
+    .blog-page__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__articles{
+        width: 830px;
+    }
+    .blog-page__article{
+        margin-bottom: 50px;
+        .blog-page__article-img-group{
+            position: relative;
+            margin-bottom: 40px;
+        }
+        &-img{
+            max-width: 830px;
+            width: 100%;
+            height: 500px;
+        }
+        &-data{
+            display: flex;
+            justify-content: space-between;
+            background-color: $btn;
+            padding: 20px;
+            width: 270px;
+            @extend %rubik-400;
+            font-size: 12px;
+            color: #fff;
+            text-transform: uppercase;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            a{
+                color: #fff;
+            }
+        }
+        &-title{
+            max-width: 670px;
+            @extend %rubik-400;
+            color: #333333;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        &-text{
+            max-width: 800px;
+            @extend %rubik-400;
+            font-size: 16px;
+            line-height: 30px;
+            color: #243f4d;
+            margin-bottom: 40px;
+        }
+        &-link{
+            @extend %rubik-500;
+            max-width: 180px;
+            font-size: 15px;
+            color: $btn;
+            text-decoration: none;
+            border: 1px solid $btn;
+            padding: 19px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+    }
+    .pagination{
+        margin-top: 70px;
+        &__list{
+            display: flex;
+            justify-content: flex-start;
+        }
+        &__item{
+            margin-right: 17px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &__link{
+            @extend %rubik-400;
+            font-size: 16px;
+            line-height: 30px;
+            color: $text;
+            padding: 10px 16px;
+            border: 1px solid $btn;
+            &:hover{
+                background-color: $btn;
+                color: #fff;
+            }
+        }
+    }
+    &__filters{
+        width: 330px;
+        padding: 0 30px;
+    }
+    &__filter-search{
+        margin-bottom: 60px;
+        display: flex;
+    }
+    &__search-input{
+        padding: 10px 20px;
+        border: 1px solid $bgblue;
+        border-radius: 5px;
+    }
+    &__search-btn{
+        background-color: $bgblue;
+        width: 56px;
+        border: 1px solid $bgblue;
+        border-radius: 5px;
+        margin-left: -10px;
+
+    }
+    .filter-title{
+        @extend %dms-700;
+        font-size: 18px;
+        color: $text;
+        margin-bottom: 20px;
+        position: relative;
+        svg{
+            position: absolute;
+            top: 50%;
+            margin-left: 15px;
+        }
+    }
+    .blog-page__filter-category{
+        margin-bottom: 50px;
+        .filter-category__link{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @extend %rubik-400;
+            font-size: 16px;
+            line-height: 43px;
+            color: #243f4d;
+            padding: 0 23px 0 14px;
+            &:hover{
+                background-color: $bgblue;
+                border-radius: 4px;
+            }
+        }
+    }
+    .filter-recent__item{
+        display: flex;
+        margin-bottom: 22px;
+    }
+    .filter-recent__content-inner{
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .filter-recent__article-title{
+        display: block;
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333333; 
+    }
+    .filter-recent__date{
+        @extend %rubik-400;
+        font-size: 12px;
+        color: #9a9a9a;
+        text-transform: uppercase;
+        &::before{
+            content: url(../images/icons/calendar.svg);
+            
+        }
+    }
 }
 
 .footer__top{
