@@ -6,6 +6,23 @@ $(function(){
         
     });
 
+    $('.details-slide__thumb').slick({
+      asNavFor: '.details-slide__big',
+      focusOnSelect: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      vertical: true,
+      draggable: false,
+      arrows: false
+    });
+    $('.details-slide__big').slick({
+      asNavFor: '.details-slide__thumb',
+      draggable: false,
+      arrows: false,
+      fade: true
+    });
+
+
     $('.filter-price__input').ionRangeSlider({
       type: "double",
       prefix: "$",
@@ -20,7 +37,7 @@ $(function(){
       }
     })
 
-    $('.filter-recent__star').rateYo({
+    $(['.filter-recent__star', '.star']).rateYo({
       starWidth: "11px",
       normalFill: "#d6d6d6",
       ratedFill: "#ffcc00",
@@ -29,7 +46,7 @@ $(function(){
       spacing: "5px"
     });
 
-    var containerEl1 = document.querySelector('[data-ref="container-1"]');
+  var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');
  
   var config = {
