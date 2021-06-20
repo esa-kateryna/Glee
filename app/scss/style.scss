@@ -1686,6 +1686,141 @@ body{
     }
 }
 
+.blog-one{
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        background-color: $btn;
+        padding: 20px;
+        width: 270px;
+        @extend %rubik-400;
+        font-size: 12px;
+        color: #fff;
+        text-transform: uppercase;
+        position: absolute;
+        top: -94px;
+        left: 0;
+        a{
+            color: #fff;
+        }
+    }
+    &__text{
+        position: relative;
+        h3{
+            @extend %rubik-400;
+            font-size: 36px;
+            color: #333333;
+            margin: 40px 0 25px 0;
+        }
+        h4{
+            @extend %rubik-500;
+            font-size: 18px;
+            line-height: 30px;
+            color: $text;
+            margin: 25px 0;
+            display: inline-block;
+        }
+        h5{
+            @extend %rubik-500;
+            font-size: 16px;
+            line-height: 30px;
+            color: $text;
+            margin: 20px 0;
+        }
+        p{
+            @extend %rubik-400;
+            font-size: 16px;
+            line-height: 30px;
+            color: $text;
+            margin: 25px 0;
+            display: block;
+        }
+        blockquote{
+            @extend %rubik-400;
+            font-size: 16px;
+            line-height: 30px;
+            color: $text;
+            background-color: $bgblue;
+            border-left: 6px solid $btn;
+            padding: 20px 40px;
+            margin: 45px 0;
+            span{
+                display: block;
+                padding: 5px 0 0 40px;
+                position: relative;
+                &::before{
+                    content: url(../images/blog/blog-one/quote-author.svg);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+        img{
+            float: left;
+            margin: 0 30px 0 0;
+        }
+    }
+    &__author{
+        padding: 25px;
+        border-top: 2px solid #ebebeb;
+        border-bottom: 2px solid #ebebeb;
+        margin: 65px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__author-about{
+        display: flex;
+        align-items: center;
+    }
+    &__author-img{
+        margin-right: 30px;
+    }
+    &__author-name{
+        @extend %rubik-400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #333333;
+    }
+    &__author-position{
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #666666;
+    }
+    &__author-tags,
+    &__author-share{
+        span{
+            @extend %rubik-400;
+            font-size: 16px;
+            line-height: 30px;
+            color: #333333;
+        }
+        a{
+            @extend %rubik-400;
+            font-size: 16px;
+            line-height: 30px;
+            color: #999999; 
+        }
+    }
+    &__author-tags{
+        span{
+            margin-right: 20px;
+        }
+    }
+    &__author-share{
+        a{
+            padding: 0 10px;
+            svg:hover{
+                path{
+                    fill: $btn;
+                }
+            }
+        }
+    }
+}
+
 
 .footer__top{
     display: flex;
